@@ -74,7 +74,7 @@ def is_perfect(n: int) -> bool:
         if n % i == 0:
             sum_divisor += i
             if i != n // i:  # neu i la uoc cua n thi n/i cung la uoc cua n
-                sum_divisor += n  # kiem tra i co khac n/i khong de tranh cong trung 1 uoc
+                sum_divisor += (n // i)  # kiem tra i co khac n/i khong de tranh cong trung 1 uoc
     return sum_divisor == n
 
 
@@ -85,4 +85,4 @@ def is_pangram(s: str) -> bool:
 
 
 if __name__ == '__main__':
-
+    print(is_perfect(10))
